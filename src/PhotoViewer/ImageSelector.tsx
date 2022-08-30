@@ -8,7 +8,7 @@ interface Props {
 
 function getImgIDs(): number[] {
     const imgIDs = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 20; i++) {
         imgIDs.push(i);
     }
     return imgIDs;
@@ -20,7 +20,7 @@ function ImageSelector({imgID, setImgID}: Props){
         {imgIDs.map((img : number) =>
             <img onClick={() => setImgID(img)} key={img}
                  className={`thumbnail ${imgID === img ? 'selected' : ''}`}
-                 src={`https://picsum.photos/id/${img}/400/300.jpg`}
+                 src={`https://picsum.photos/id/${img}/400/300.jpg?grayscale`}
                  alt="image loading"/>
             )}
     </>)

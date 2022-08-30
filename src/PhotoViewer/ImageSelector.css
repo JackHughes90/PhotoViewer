@@ -1,8 +1,9 @@
 .thumbnail {
-    width: 312.5px;
-    height: auto;
+    width: 192.5px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .selected {
-    outline: 3px solid blue;
+    outline: 3px solid orange;
 }
