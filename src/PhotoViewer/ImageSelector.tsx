@@ -1,23 +1,29 @@
 import React from "react";  // import React (to provide access to TSX)
+import './ImageSelector.css';
 
-function getImgUrls(): any {
-    const imgUrls = [];
-
-    for (let i = 1; i <= 10; i++) {
-        const imageNumberString = i.toString();
-        imgUrls.push(`https://picsum.photos/id/${imageNumberString}/200/300.jpg`)
-    }
-
-    return imgUrls;
+interface Props {
+    setImgID: React.Dispatch<React.SetStateAction<number>>
 }
 
-function ImageSelector(){
-    const imgUrls = getImgUrls();
+function getImgIDs(): number[] {
+    const imgIDs = [];
+
+    for (let i = 1; i <= 10; i++) {
+        
+        imgIDs.push(i);
+    }
+
+    return imgIDs;
+}
+
+function ImageSelector({setImgID}: Props){
+    const imgIDs = getImgIDs();
     
     return (
-    <div className="bankimage">
-        {imgUrls.map((img : string) =>
-            <img src={img} alt="image loading"/>)}
+    <div className="image-bank">
+        {imgIDs.map((img : number) =>
+            <img onClick={() => setImgID(img)} key={img} className="thumbnail" src= {`https://picsum.photos/id/${img}/400/300.jpg`} alt="image loading"/>
+            )}
     </div>
     )
 } 

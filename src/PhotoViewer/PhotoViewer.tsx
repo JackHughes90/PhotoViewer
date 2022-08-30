@@ -8,7 +8,7 @@ interface Props {
 function PhotoViewer({link}: Props) {    // declare and export new function called 'PhotoViewer'
     return (                
         <div className="photo">               
-             <img src={link} alt="image loading"/>
+            <img src={link} alt="image loading"/>
         </div>
     );
 }

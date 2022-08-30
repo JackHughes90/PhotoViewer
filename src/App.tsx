@@ -6,15 +6,16 @@ import ImageSelector from './PhotoViewer/ImageSelector';
 
 
 function App() {
+  const [imgID, setImgID] = useState(10);
+  
   return (
-    
       <div>
           <h1>React Photo Viewer</h1>
           <div className = 'photoViewer'>
-            <PhotoViewer link = "https://picsum.photos/id/10/1280/1000.jpg" />
+            <PhotoViewer link = {`https://picsum.photos/id/${imgID}/1280/1000.jpg`} />
           </div>
           <div className = 'imageSelector'>
-            <ImageSelector/>
+            <ImageSelector setImgID = {setImgID}/>
           </div>
       </div>
 
