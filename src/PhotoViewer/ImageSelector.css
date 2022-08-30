@@ -1,12 +1,8 @@
-.image-bank {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
 .thumbnail {
     width: 312.5px;
     height: auto;
+}
+
+.selected {
+    outline: 3px solid blue;
 }

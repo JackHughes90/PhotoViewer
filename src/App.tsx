@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
 import PhotoViewer from './PhotoViewer/PhotoViewer';
 import ImageSelector from './PhotoViewer/ImageSelector';
@@ -12,13 +11,12 @@ function App() {
       <div>
           <h1>React Photo Viewer</h1>
           <div className = 'photoViewer'>
-            <PhotoViewer link = {`https://picsum.photos/id/${imgID}/1280/1000.jpg`} />
+            <PhotoViewer link={`https://picsum.photos/id/${imgID}/1000/500.jpg`} />
           </div>
           <div className = 'imageSelector'>
-            <ImageSelector setImgID = {setImgID}/>
+            <ImageSelector imgID={imgID} setImgID={setImgID}/>
           </div>
       </div>
-
   );
 }
 // function App() {
