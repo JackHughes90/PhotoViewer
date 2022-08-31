@@ -14,14 +14,19 @@ function getImgIDs(): number[] {
     return imgIDs;
 }
 
+function scrollUp() {
+    window.scrollTo(0, 0);
+}
+
 function ImageSelector({imgID, setImgID}: Props){
     const imgIDs = getImgIDs();
     return (<>
         {imgIDs.map((img : number) =>
-            <img onClick={() => setImgID(img)} key={img}
-                 className={`thumbnail ${imgID === img ? 'selected' : ''}`}
-                 src={`https://picsum.photos/id/${img}/400/300.jpg?grayscale`}
-                 alt="image loading"/>
+            <img onClick={() => setImgID(img)}
+                key={img}
+                className={`thumbnail ${imgID === img ? 'selected' : ''}`}
+                src={`https://picsum.photos/id/${img}/400/300.jpg`}
+                alt="image loading"/>
             )}
     </>)
 } 

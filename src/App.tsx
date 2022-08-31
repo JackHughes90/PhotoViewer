@@ -7,7 +7,7 @@ function App() {
   const [imgID, setImgID] = useState(1);
   
   return (
-      <div>
+      <>
           <h1>React Photo Viewer</h1>
           <div className='photoViewer'>
             <PhotoViewer link={`https://picsum.photos/id/${imgID}/800/400.jpg`} />
@@ -16,7 +16,7 @@ function App() {
           <div className='imageSelector'>
             <ImageSelector imgID={imgID} setImgID={setImgID}/>
           </div>
-      </div>
+      </>
   );
 }
 

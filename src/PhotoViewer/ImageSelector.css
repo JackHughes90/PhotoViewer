@@ -2,8 +2,14 @@
     width: 192.5px;
     height: 100px;
     object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.thumbnail:hover{
+    filter: none;
 }
 
 .selected {
     outline: 3px solid orange;
+    filter: none;
 }
